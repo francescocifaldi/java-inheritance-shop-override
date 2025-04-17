@@ -75,4 +75,10 @@ public class Prodotto {
         return codice + "-" + nome + "-" + marca;
     }
 
+    @Override
+    public String toString() {
+        return "Prodotto [codice=" + codice + ", nome=" + nome + ", marca=" + marca + ", prezzo=" + prezzo + ", iva="
+                + iva + "]";
+    }
+
 }
