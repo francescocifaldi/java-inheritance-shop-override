@@ -39,4 +39,12 @@ public class Cuffie extends Prodotto {
     public String toString() {
         return super.toString() + " Cuffie [colore=" + colore + ", wireless=" + wireless + "]";
     }
+
+    @Override
+    public double getPrezzoScontato() {
+        if (!wireless) {
+            return prezzo - (prezzo * 0.07);
+        } else
+            return prezzo - (prezzo * 0.02);
+    }
 }
