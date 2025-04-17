@@ -75,6 +75,10 @@ public class Prodotto {
         return codice + "-" + nome + "-" + marca;
     }
 
+    public double getPrezzoScontato() {
+        return prezzo - (prezzo * 0.02);
+    }
+
     @Override
     public String toString() {
         return "Prodotto [codice=" + codice + ", nome=" + nome + ", marca=" + marca + ", prezzo=" + prezzo + ", iva="
