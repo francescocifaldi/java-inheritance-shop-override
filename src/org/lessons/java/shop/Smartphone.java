@@ -39,4 +39,13 @@ public class Smartphone extends Prodotto {
     public String toString() {
         return super.toString() + " Smartphone [codiceIMEI=" + codiceIMEI + ", memoria=" + memoria + "]";
     }
+
+    @Override
+    public double getPrezzoScontato() {
+        if (memoria < 32) {
+            return prezzo - (prezzo * 0.05);
+        } else
+            return prezzo - (prezzo * 0.02);
+    }
+
 }
