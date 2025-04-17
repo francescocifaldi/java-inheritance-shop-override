@@ -37,14 +37,14 @@ public class Televisore extends Prodotto {
 
     @Override
     public String toString() {
-        return super.toString() + " Televisore [dimensioni=" + dimensioni + ", isSmart=" + isSmart + "]";
+        return super.toString() + " " + (isSmart ? "Smart TV " : "TV ") + dimensioni + " pollici";
     }
 
     @Override
     public double getPrezzoScontato() {
         if (!isSmart) {
-            return prezzo - (prezzo * 0.1);
+            return calcolaPrezzoFinale() - (calcolaPrezzoFinale() * 0.1);
         } else
-            return prezzo - (prezzo * 0.02);
+            return calcolaPrezzoFinale() - (calcolaPrezzoFinale() * 0.02);
     }
 }

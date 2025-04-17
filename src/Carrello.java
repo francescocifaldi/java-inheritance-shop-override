@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.math.BigDecimal;
 import org.lessons.java.shop.*;
 
 public class Carrello {
@@ -78,10 +78,17 @@ public class Carrello {
                         System.out.println("Prodotto aggiunto!\n");
                 }
 
+                double totale = 0.0;
                 System.out.println("\nEcco il tuo carrello:");
                 for (Prodotto p : carrello.prodotti) {
                         System.out.println(p);
+                        if (fidelytyOwner) {
+                                totale += p.getPrezzoScontato();
+                        } else {
+                                totale += p.calcolaPrezzoFinale();
+                        }
                 }
+                System.out.printf("Totale: € %.2f%n", totale);
 
                 scanner.close();
         }

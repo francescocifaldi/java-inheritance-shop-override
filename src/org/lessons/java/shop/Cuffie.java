@@ -37,14 +37,14 @@ public class Cuffie extends Prodotto {
 
     @Override
     public String toString() {
-        return super.toString() + " Cuffie [colore=" + colore + ", wireless=" + wireless + "]";
+        return super.toString() + " " + "Cuffie di colore " + colore + " " + (wireless ? "wireless" : "cablate");
     }
 
     @Override
     public double getPrezzoScontato() {
         if (!wireless) {
-            return prezzo - (prezzo * 0.07);
+            return calcolaPrezzoFinale() - (calcolaPrezzoFinale() * 0.07);
         } else
-            return prezzo - (prezzo * 0.02);
+            return calcolaPrezzoFinale() - (calcolaPrezzoFinale() * 0.02);
     }
 }
