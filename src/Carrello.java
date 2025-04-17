@@ -88,7 +88,7 @@ public class Carrello {
                                 totale += p.calcolaPrezzoFinale();
                         }
                 }
-                System.out.printf("Totale: € %.2f%n", totale);
+                System.out.printf("Totale" + (fidelytyOwner ? "scontato " : "") + ": € %.2f%n", totale);
 
                 scanner.close();
         }
