@@ -6,10 +6,18 @@ public class Carrello {
         private Prodotto[] prodotti = new Prodotto[0];
 
         public static void main(String[] args) {
+
                 Scanner scanner = new Scanner(System.in);
                 Carrello carrello = new Carrello();
+                boolean fidelytyOwner = false;
 
                 System.out.println("Benvenuto nel carrello!");
+                System.out.println("Hai una carta fedeltà? (si/no)");
+                String cartaFedelta = scanner.nextLine();
+
+                if (cartaFedelta.equalsIgnoreCase("si")) {
+                        fidelytyOwner = true;
+                }
 
                 while (true) {
                         System.out.println("Vuoi aggiungere un prodotto al carrello? (si/no)");
